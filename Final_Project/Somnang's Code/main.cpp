@@ -18,7 +18,19 @@ int main(){
             string username, password;
             admin.registerAdmin(username, password);
             system("cls");
+            admin.getAdmin();
             options();
+            break;
+        }
+        case 2: {
+            Admin admin;
+            string username, password;
+            cout << "Enter username: ";
+            cin.ignore();
+            getline(cin, username);
+            cout << "Enter password: ";
+            getline(cin, password);
+            admin.login(username, password);
             break;
         }
         default: {
