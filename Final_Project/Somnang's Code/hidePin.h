@@ -7,7 +7,6 @@ string getHiddenInput() {
     string pin;
     char ch;
 
-    cout << "Enter your PIN: ";
     while ((ch = _getch()) != '\r') {  // '\r' is the Enter key
         if (ch == '\b') {  // Handle backspace
             if (!pin.empty()) {

@@ -10,37 +10,29 @@ using namespace std;
 //options
 class Admin{
     public:
-        string name;
-        string password;
+        string name = "Admin";
+        string pwd = "123456";
         Admin(string name, string password){
             this->name = name;
-            this->password = password;
+            this->pwd = password;
         }
         Admin(){
 
         }
-        void registerAdmin(string username, string pwd){
-            cin.ignore();
+        void login(string username, string password){
             cout << "Enter your username: ";
-            getline(cin, username);
+            username;
+            cin >> username;
             cout << "Enter your PIN: ";
-            cin >> pwd;
-        }
-        
-        void getAdmin(){
-            cout << "Successfully registered " << name << "!" << endl << endl;
-        }
-        void login(string adminName, string adminPwd){
-           // cout << "Enter your PIN: ";
-            getHiddenInput();
-            if(adminName == name && adminPwd == password){
-                cout << "Login successful!" << endl << endl;
-                system("pause");
+            cin >> password;
+            if(username == name && password == pwd){
                 system("cls");
+                cout << "=====================Login successful=====================" << endl;
                 secondTab();
+                
             } else {
                 cout << "Invalid credentials! Please try again." << endl;
-                login(adminName, adminPwd);
+                login(username, password);
             }
         }
 };

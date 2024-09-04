@@ -13,25 +13,13 @@ int main(){
     cout << "\nEnter your choice: ";
     cin >> choice;
     switch(choice){
+        
         case 1: {
             Admin admin;
             string username, password;
-            admin.registerAdmin(username, password);
-            system("cls");
-            admin.getAdmin();
-            options();
-            main();
-        }
-        case 2: {
-            Admin admin;
-            string username, password;
-            cout << "Enter username: ";
-            cin.ignore();
-            getline(cin, username);
-            //cout << "Enter password: ";
-            // getline(cin, password);
+            password = getHiddenInput();
             admin.login(username, password);
-            //break;
+            break;
         }
         default: {
             cout << "Invalid choice. Please try again.\n";
