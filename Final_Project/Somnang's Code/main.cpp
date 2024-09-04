@@ -20,7 +20,7 @@ int main(){
             system("cls");
             admin.getAdmin();
             options();
-            break;
+            main();
         }
         case 2: {
             Admin admin;
@@ -28,10 +28,10 @@ int main(){
             cout << "Enter username: ";
             cin.ignore();
             getline(cin, username);
-            cout << "Enter password: ";
-            getline(cin, password);
+            //cout << "Enter password: ";
+            // getline(cin, password);
             admin.login(username, password);
-            break;
+            //break;
         }
         default: {
             cout << "Invalid choice. Please try again.\n";
@@ -39,7 +39,5 @@ int main(){
             main();
         }
     }
-    
     return 0;
 }
-

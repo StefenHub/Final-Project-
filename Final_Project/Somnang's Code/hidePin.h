@@ -1,6 +1,6 @@
 #include <iostream>
 #include <conio.h>  // For getch()
-
+#pragma once;
 using namespace std;
 
 string getHiddenInput() {

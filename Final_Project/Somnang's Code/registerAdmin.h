@@ -31,12 +31,12 @@ class Admin{
             cout << "Successfully registered " << name << "!" << endl << endl;
         }
         void login(string adminName, string adminPwd){
-            cin.ignore();
-            cout << "Enter your username: ";
-            getline(cin, adminName);
-            cout << "Enter your PIN: ";
+           // cout << "Enter your PIN: ";
             getHiddenInput();
             if(adminName == name && adminPwd == password){
+                cout << "Login successful!" << endl << endl;
+                system("pause");
+                system("cls");
                 secondTab();
             } else {
                 cout << "Invalid credentials! Please try again." << endl;
