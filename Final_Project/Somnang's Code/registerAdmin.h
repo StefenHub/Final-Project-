@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "adminManage.h"
+#include "hidePin.h"
 using namespace std;
 
 //Hospital management system
@@ -15,6 +16,9 @@ class Admin{
             this->name = name;
             this->password = password;
         }
+        Admin(){
+
+        }
         void registerAdmin(string username, string pwd){
             cin.ignore();
             cout << "Enter your username: ";
@@ -22,6 +26,7 @@ class Admin{
             cout << "Enter your PIN: ";
             cin >> pwd;
         }
+        
         void getAdmin(){
             cout << "Successfully registered " << name << "!" << endl << endl;
         }
@@ -30,7 +35,7 @@ class Admin{
             cout << "Enter your username: ";
             getline(cin, adminName);
             cout << "Enter your PIN: ";
-            getline(cin, adminPwd);
+            getHiddenInput();
             if(adminName == name && adminPwd == password){
                 secondTab();
             } else {
