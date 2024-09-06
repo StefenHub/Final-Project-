@@ -25,7 +25,7 @@ int main() {
             
             cout << "==============================||Admin Log In||==================================" << endl;
             
-            getHiddenInput() is implemented elsewhere to mask input
+            getHiddenInput(); // is implemented elsewhere to mask input
 
             admin.login(username, password);  // Use the username and password to log in
             break;
