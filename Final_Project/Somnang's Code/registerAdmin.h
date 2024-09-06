@@ -24,12 +24,12 @@ class Admin{
             username;
             cin >> username;
             cout << "Enter your PIN: ";
-            cin >> password;
+            password = getHiddenInput();
+           
             if(username == name && password == pwd){
                 system("cls");
                 cout << "=====================Login successful=====================" << endl;
                 secondTab();
-                
             } else {
                 cout << "Invalid credentials! Please try again." << endl;
                 login(username, password);

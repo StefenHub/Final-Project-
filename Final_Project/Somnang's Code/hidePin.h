@@ -6,7 +6,7 @@ using namespace std;
 string getHiddenInput() {
     string pin;
     char ch;
-
+    // cout << "Enter pin: ";
     while ((ch = _getch()) != '\r') {  // '\r' is the Enter key
         if (ch == '\b') {  // Handle backspace
             if (!pin.empty()) {
@@ -23,8 +23,3 @@ string getHiddenInput() {
     return pin;
 }
 
-// int main() {
-//     string pin = getHiddenInput();
-//     cout << "Your PIN is: " << pin << endl;  // For demonstration (remove in real use)
-//     return 0;
-// }
