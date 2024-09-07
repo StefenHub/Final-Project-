@@ -22,19 +22,14 @@ int main() {
             system("cls");
             Admin admin;
             string username, password;
-            
             cout << "==============================||Admin Log In||==================================" << endl;
-            
-            getHiddenInput(); // is implemented elsewhere to mask input
-
             admin.login(username, password);  // Use the username and password to log in
             break;
         }
         case 2: {
             system("cls");
-            cout << "==============================||Exiting||==================================" << endl;
-            options();
-            //break;
+            cout << "==============================||Exited||==================================" << endl;
+            break;
         }
         default: {
             cout << "Invalid choice. Please try again.\n";
