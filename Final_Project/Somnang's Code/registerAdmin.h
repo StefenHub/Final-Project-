@@ -4,6 +4,7 @@
 #include <vector>
 #include "adminManage.h"
 #include "hidePin.h"
+
 using namespace std;
 
 //Hospital management system
@@ -20,15 +21,15 @@ class Admin{
 
         }
         void login(string username, string password){
-            cout << "Enter your username: ";
+            cout << "Enter username: ";
             username;
             cin >> username;
-            cout << "Enter your PIN: ";
+            cout << "Enter password: ";
             password = getHiddenInput();
            
             if(username == name && password == pwd){
                 system("cls");
-                cout << "=====================Login successful=====================" << endl;
+                cout << " ==========================Login successful===========================" << endl;
                 secondTab();
             } else {
                 cout << "Invalid credentials! Please try again." << endl;

@@ -4,7 +4,6 @@
 #include <limits>  // Include this header for numeric_limits
 #include "adminOptions.h"
 #include "registerAdmin.h"
-
 using namespace std;
 
 int main() {
@@ -24,10 +23,10 @@ int main() {
             string username, password;
             cout << "==============================||Admin Log In||==================================" << endl;
             admin.login(username, password);  // Use the username and password to log in
-            break;
+            choose();
+            
         }
         case 2: {
-            system("cls");
             cout << "==============================||Exited||==================================" << endl;
             break;
         }
